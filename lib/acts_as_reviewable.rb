@@ -1,3 +1,4 @@
+require 'active_record'
 module ActsAsReviewable
   module Review
     def find_review_by reviewer
