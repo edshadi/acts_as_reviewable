@@ -5,7 +5,7 @@ class CreateReviews < ActiveRecord::Migration
       r.text        :review
       r.integer     :status
       r.references  :reviewable,  :polymorphic => true
-      r.integer     :reviewer,    :null => false
+      r.integer     :reviewer_id
 
       t.timestamps
     end
