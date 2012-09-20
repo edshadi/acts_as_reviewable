@@ -4,11 +4,16 @@ ActiveRecord::Schema.define :version => 0 do
     r.text        :review
     r.integer     :status
     r.references  :reviewable,  :polymorphic => true
-    r.integer     :reviewer,    :null => false
+    r.integer     :reviewer_id
 
-    t.timestamps
+    r.timestamps
   end
+
   create_table :reviewables do |r|
     r.string :name
+  end
+
+  create_table :users do |u|
+    u.string :name
   end
 end
