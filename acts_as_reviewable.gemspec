@@ -2,6 +2,7 @@ Gem::Specification.new do |s|
   s.name        = 'acts_as_reviewable'
   s.version     = '0.0.0'
   s.date        =  '2012-09-20'
+  s.summary = 'Make any active record model reviewable'
   s.description = 'Make any active record model reviewable'
   s.authors     = ['Ed Shadi']
   s.email       = ['edshadi@gmail.com']
