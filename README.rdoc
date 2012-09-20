@@ -1,0 +1,31 @@
+= Acts As Reviewable (beta)
+
+  Allow any model to be reviewed.
+
+== Installation :
+  gem 'acts_as_reviewable'
+
+== How to use
+
+  rails g review
+
+  this will generate review model and migration
+
+  Add it to your Model to make it reviewable:
+    class Code < ActiveRecord::Base
+      acts_as_reviewable
+      PASS = 0
+      FAIL = 1
+    end
+
+    user = User.last
+    code = Code.create
+    review = code.reviews.create :review => "sweet code", :status => CODE::PASS, :reviewer => user
+
+    Review.find_review_by user => [review]
+    Review.find_review_for code => [review]
+
+    code.reviews => [reviews]
+
+== Plans
+  This is just a base start and more to come, I will post specifics soon.
