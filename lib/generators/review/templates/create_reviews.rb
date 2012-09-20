@@ -1,5 +1,5 @@
 class CreateReviews < ActiveRecord::Migration
-  def self.change
+  def change
     create_table :reviews do |r|
       r.string      :title,       :default => ""
       r.text        :review
@@ -7,7 +7,7 @@ class CreateReviews < ActiveRecord::Migration
       r.references  :reviewable,  :polymorphic => true
       r.integer     :reviewer_id
 
-      t.timestamps
+      r.timestamps
     end
 
     add_index :reviews, :reviewable_type
