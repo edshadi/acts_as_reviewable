@@ -5,6 +5,7 @@ ActiveRecord::Schema.define :version => 0 do
     r.integer     :status
     r.references  :reviewable,  :polymorphic => true
     r.integer     :reviewer_id
+    r.integer     :parent_id
 
     r.timestamps
   end

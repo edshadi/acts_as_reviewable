@@ -1,6 +1,4 @@
 class Review < ActiveRecord::Base
   include ActsAsReviewable::Review
-
-  belongs_to :reviewable, :polymorphic => true
-  belongs_to :reviewer, :class_name => 'User'
+  acts_as_review_model :reviewer => 'User'
 end
