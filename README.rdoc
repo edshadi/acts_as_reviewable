@@ -20,7 +20,7 @@
 
     user = User.last
     code = Code.create
-    review = code.reviews.create :review => "sweet code", :status => CODE::PASS, :reviewer => user
+    review = code.reviews.create :review => "sweet code", :reviewer => user
 
     Review.find_review_by user => [review]
     Review.find_review_for code => [review]

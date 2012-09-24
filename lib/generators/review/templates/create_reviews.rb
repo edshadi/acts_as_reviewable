@@ -3,7 +3,7 @@ class CreateReviews < ActiveRecord::Migration
     create_table :reviews do |r|
       r.string      :title,       :default => ""
       r.text        :review
-      r.integer     :status
+      r.string      :state
       r.references  :reviewable,  :polymorphic => true
       r.integer     :reviewer_id
       r.integer     :parent_id
