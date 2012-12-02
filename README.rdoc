@@ -1,5 +1,5 @@
+{<img src="https://travis-ci.org/edshadi/acts_as_reviewable.png" />}[https://travis-ci.org/edshadi/acts_as_reviewable]
 = Acts As Reviewable (beta)
-
   Allow any model to be reviewed.
 
 == Installation :
